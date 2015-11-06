@@ -1,0 +1,21 @@
+{
+  "name": "BEMTMPL",
+  "version": "0.0.1",
+  "description": "BEM templater",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:truerenton/BEMTMPL.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/truerenton/BEMTMPL/issues"
+  },
+  "homepage": "https://github.com/truerenton/BEMTMPL",
+  "devDependencies": {
+    "bemjson-to-html": "^0.2.8",
+    "extend": "^3.0.0",
+    "jquery": "^2.1.4"
+  }
+}

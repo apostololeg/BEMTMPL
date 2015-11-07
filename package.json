@@ -13,9 +13,16 @@
     "url": "https://github.com/truerenton/BEMTMPL/issues"
   },
   "homepage": "https://github.com/truerenton/BEMTMPL",
-  "devDependencies": {
-    "bemjson-to-html": "^0.2.8",
+  "dependencies": {
+    "bemjson-to-html": "git+http://github.com:truerenton/bemjson-to-html.git#d231f632f9bd0ab7eb64399937a05c039d281a59",
     "extend": "^3.0.0",
-    "jquery": "^2.1.4"
+    "json5": "^0.4.0"
+  },
+  "devDependencies": {
+    "brace": "^0.5.1",
+    "jquery": "^2.1.4",
+    "js-beautify": "^1.5.10",
+    "webpack": "^1.12.3",
+    "webpack-dev-server": "^1.12.1"
   }
 }

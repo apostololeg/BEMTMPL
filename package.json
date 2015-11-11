@@ -1,7 +1,7 @@
 {
-  "name": "BEMTMPL",
+  "name": "bemtmpl",
   "version": "0.0.1",
-  "description": "BEM templater",
+  "description": "JavaScript based, client-side, lightweight, simple templater for BEM",
   "main": "index.js",
   "repository": {
     "type": "git",

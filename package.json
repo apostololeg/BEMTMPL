@@ -1,6 +1,6 @@
 {
   "name": "bemtmpl",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JavaScript based, client-side, lightweight, simple templater for BEM",
   "main": "index.js",
   "repository": {

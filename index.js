@@ -8,27 +8,46 @@ var extendibleFields = ['js', 'attrs', 'mods', 'mix', 'content'];
  * @param  {Object|Array} data
  * @param  {Boolean}      force
  */
-function extendField(_fName, data, force) {
+function fMethod(_fName, data, force) {
     var fData = this[_fName];
+    var isMix = _fName === '_mix';
+    var stringGetter = typeof data === 'string'
+        && (_fName === '_attrs' || _fName === '_mods');
 
-    if (force || !fData) {
+    if (!fData && data) {
         this[_fName] = data;
         return;
     }
 
-    if (Array.isArray(fData) || _fName === '_mix') {
-        this[_fName] = fData.concat(data);
+    // getter
+    if (stringGetter) {
+        return fData[data];
+    }
+    if (!data) {
+        return fData;
+    }
+
+    if (Array.isArray(fData) || isMix) {
+        this[_fName] = isMix || !force ? [].concat(fData, data) : data;
         return;
     }
 
     if (typeof fData === 'string') {
-        this[_fName] += data;
-        return
+        this[_fName] = force ? data : (fData + data);
+        return;
     }
 
     if (typeof fData === 'object') {
-        this[_fName] = extend(fData, data);
-        return;
+        if (force) {
+            this[_fName] = extend(fData, data);
+            return;
+        }
+
+        for (var field in data) {
+            if (!fData[field]) {
+                this[_fName][field] = data[field];
+            }
+        }
     }
 }
 
@@ -101,7 +120,7 @@ extend(BEMTMPL.prototype, {
             _fName = '_' + fName;
 
             ctx[_fName] = ctx[fName];
-            ctx[fName] = extendField.bind(ctx, _fName);
+            ctx[fName] = fMethod.bind(ctx, _fName);
         });
     },
 

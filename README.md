@@ -31,9 +31,22 @@ bemjson tree:
 * `mix`
 * `content`
 
-All methods have same signature `method(data, force)`:
+All methods have same signature `method([data][, force])`:
+
 * `data` – data to modify self-named field of bemjson tree
-* `force` – if `true`, field value was replaced with `data`, otherwise, by default, field data was extended with `data`
+* `force` – by default, field data was extended with `data`. If `force: true`, field value was replaced with `data`.
+
+**NOTE**: `force` doesn't work for `mix` for ideological reasons.
+
+#### Getters
+If you don't specify the `data`, all above methods return value of appropriate field.
+
+`ctx.mods(); // { theme: simple }`
+
+For `attrs` and `mods` you can specify the name of attribute or modifier that you want to get.
+
+`ctx.mods('theme'); // 'simple'`
+
 
 ### Dependencies
 * [bemjson-to-html](https://github.com/floatdrop/bemjson-to-html)

@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/truerenton/BEMTMPL",
   "dependencies": {
-    "bemjson-to-html": "git+http://github.com:truerenton/bemjson-to-html.git#d231f632f9bd0ab7eb64399937a05c039d281a59",
+    "bemjson-to-html": "^0.3.0",
     "extend": "^3.0.0",
     "json5": "^0.4.0"
   },

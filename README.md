@@ -1,5 +1,6 @@
 ## JavaScript based, client-side, lightweight, simple templater for BEM
-[![npm](https://img.shields.io/npm/v/bemtmpl.svg?style=flat-square)](bemtmpl)
+[![npm](https://img.shields.io/npm/v/bemtmpl.svg?style=flat-square)](https://www.npmjs.com/package/bemtmpl)
+[![npm](https://img.shields.io/npm/dm/bemtmpl.svg?style=flat-square)](https://www.npmjs.com/package/bemtmpl)
 
 [Demo](http://truerenton.github.io/BEMTMPL/editor/)
 
